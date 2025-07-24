@@ -39,6 +39,13 @@ body {
     gap: 0.5rem;
 }
 
+.nav-logo a,
+.nav-logo a:visited,
+.nav-logo a:hover,
+.nav-logo a:active {
+  text-decoration: none;
+}
+
 .logo-img {
     width: 32px;
     height: 32px;

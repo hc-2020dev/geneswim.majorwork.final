@@ -12,23 +12,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="https://ext.same-assets.com/4193966861/740545503.svg" alt="GeneSwim Logo" class="logo-img">
-                    <span class="logo-text">GeneSwim</span>
-                </div>
-                <div class="nav-links">
-                    <a href="#circuit-generator" class="nav-link">Circuit Generator</a>
-                    <a href="#structured-sets" class="nav-link">Structured Sets</a>
-                </div>
-                <div class="nav-auth">
-                    <button class="btn-login">Log In</button>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <?php require_once 'navbar.php'; ?>
 
     <!-- Hero Section -->
     <section class="hero">
