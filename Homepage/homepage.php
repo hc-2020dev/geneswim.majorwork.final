@@ -17,7 +17,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background">
-            <img src="https://ext.same-assets.com/4193966861/2251823357.jpeg" alt="Swimming Pool" class="hero-bg-img">
+            <img src="2251823357.jpeg" alt="Swimming Pool" class="hero-bg-img">
         </div>
         <div class="hero-content">
             <div class="hero-card">

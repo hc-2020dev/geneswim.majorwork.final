@@ -4,7 +4,7 @@
             <div class="nav-container">
                 <div class="nav-logo">
                     <a href="homepage.php">
-                        <img src="https://ext.same-assets.com/4193966861/740545503.svg" alt="GeneSwim Logo" class="logo-img">
+                        <img src="geneswimupdate.png" alt="GeneSwim Logo" class="logo-img">
                         <span class="logo-text">GeneSwim</span>
                     </a>
                 </div>

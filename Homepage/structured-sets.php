@@ -29,7 +29,7 @@
             <!-- Sprints Set -->
             <article class="set-item" data-set="sprints">
                 <div class="set-image">
-                    <img src="https://ext.same-assets.com/4193966861/3844417856.jpeg" alt="Sprints Swimming Training" loading="lazy">
+                    <img src="3844417856.jpeg" alt="Sprints Swimming Training" loading="lazy">
                 </div>
                 <div class="set-content">
                     <h2 class="set-title">Sprints</h2>
@@ -51,7 +51,7 @@
             <!-- Hypoxic Set -->
             <article class="set-item" data-set="hypoxic">
                 <div class="set-image">
-                    <img src="https://ext.same-assets.com/4193966861/2988967394.jpeg" alt="Hypoxic Training Underwater" loading="lazy">
+                    <img src="2988967394.jpeg" alt="Hypoxic Training Underwater" loading="lazy">
                 </div>
                 <div class="set-content">
                     <h2 class="set-title">Hypoxic</h2>
@@ -73,7 +73,7 @@
             <!-- Rehab Set -->
             <article class="set-item" data-set="rehab">
                 <div class="set-image">
-                    <img src="https://ext.same-assets.com/4193966861/4221476503.jpeg" alt="Rehabilitation Swimming" loading="lazy">
+                    <img src="4221476503.jpeg" alt="Rehabilitation Swimming" loading="lazy">
                 </div>
                 <div class="set-content">
                     <h2 class="set-title">Rehab</h2>
@@ -95,7 +95,7 @@
             <!-- Aerobics Set -->
             <article class="set-item" data-set="aerobics">
                 <div class="set-image">
-                    <img src="https://ext.same-assets.com/4193966861/4097219043.jpeg" alt="Aerobic Swimming Training" loading="lazy">
+                    <img src="4097219043.jpeg" alt="Aerobic Swimming Training" loading="lazy">
                 </div>
                 <div class="set-content">
                     <h2 class="set-title">Aerobics</h2>
@@ -117,7 +117,7 @@
             <!-- Sprint Medley Set -->
             <article class="set-item" data-set="sprint-medley">
                 <div class="set-image">
-                    <img src="https://ext.same-assets.com/4193966861/4245787591.jpeg" alt="Sprint Medley Swimming" loading="lazy">
+                    <img src="4245787591.jpeg" alt="Sprint Medley Swimming" loading="lazy">
                 </div>
                 <div class="set-content">
                     <h2 class="set-title">Sprint (medley)</h2>

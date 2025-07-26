@@ -4,18 +4,18 @@
             <div class="grid">
                 <div class="col-6_md-12">
                     <div class="footer-brand">
-                        <img src="https://ext.same-assets.com/4193966861/740545503.svg" alt="GeneSwim Logo" class="footer-logo">
+                        <img src="geneswimupdate.png" alt="GeneSwim Logo" class="footer-logo">
                         <span class="footer-brand-text">GeneSwim</span>
                     </div>
                     <div class="social-links">
                         <a href="#" class="social-link">
-                            <img src="https://ext.same-assets.com/4193966861/1164539889.png" alt="Instagram">
+                            <img src="1164539889.png" alt="Instagram">
                         </a>
                         <a href="#" class="social-link">
-                            <img src="https://ext.same-assets.com/4193966861/231688416.png" alt="Facebook">
+                            <img src="231688416.png" alt="Facebook">
                         </a>
                         <a href="#" class="social-link">
-                            <img src="https://ext.same-assets.com/4193966861/2926978406.png" alt="YouTube">
+                            <img src="2926978406.png" alt="YouTube">
                         </a>
                     </div>
                     <div class="newsletter">
