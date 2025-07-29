@@ -60,6 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="style.css">
+    <script src="auth.js" defer></script>
 </head>
 <body>
     <div class="register-container">
@@ -89,6 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit">Register</button>
         </form>
         <p>Already have an account? <a href="login.php">Log in</a></p>
+        <p><a href="homepage.php">← Back to Home</a></p>
     </div>
 </body>
 </html> 

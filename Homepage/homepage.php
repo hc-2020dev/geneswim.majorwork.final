@@ -21,7 +21,7 @@
         </div>
         <div class="hero-content">
             <div class="hero-card">
-                <h1 class="hero-title">Optimize<br>Your<br>Swimming<br>Circuits</h1>
+                <h1 class="hero-title">Optimize Your<br>Swimming<br>Circuits</h1>
                 <p class="hero-description">Welcome to GeneSwim, your partner in achieving peak fitness through personalised swimming circuits. Whether you aim to enhance endurance, build strength, or improve health, our swimming circuit generator is designed to help you reach your fitness goals.</p>
                 <button class="btn-start">Start Now</button>
             </div>
