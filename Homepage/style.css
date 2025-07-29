@@ -722,12 +722,15 @@ body {
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
+    position: relative; /* or absolute/fixed depending on layout */
+    z-index: 9999;       /* Ensure it's higher than the covering element */
 }
 
 .login-container a:hover,
 .register-container a:hover {
     color: #764ba2;
     text-decoration: underline;
+    z-index: 1; /* Lower than the link */
 }
 
 .error-message {

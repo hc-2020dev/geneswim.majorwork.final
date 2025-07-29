@@ -211,6 +211,15 @@ function openSetModal(setType) {
 
     // Prevent body scroll
     document.body.style.overflow = 'hidden';
+
+    // Example: inside your function that opens the modal
+    if (setType === 'sprints') {
+        document.querySelector('.btn-start-workout').onclick = function() {
+            window.location.href = 'sprint_set.php';
+        };
+    } else {
+        document.querySelector('.btn-start-workout').onclick = null; // or set to another page or do nothing
+    }
 }
 
 function closeModal() {

@@ -67,11 +67,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="login-container">
-        <h2>Login</h2>
         <?php if ($error): ?>
             <div class="error-message"><?php echo $error; ?></div>
         <?php endif; ?>
         <form method="post" action="">
+        <h2>Login</h2>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
@@ -79,9 +79,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="password" id="password" name="password" required>
 
             <button type="submit">Login</button>
+            <p>Don't have an account? <a href="register.php">Register</a></p>
+            <p><a href="homepage.php">← Back to Home</a></p>
         </form>
-        <p>Don't have an account? <a href="register.php">Register</a></p>
-        <p><a href="homepage.php">← Back to Home</a></p>
     </div>
 </body>
 </html> 

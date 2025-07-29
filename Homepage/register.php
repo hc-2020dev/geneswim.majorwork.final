@@ -64,7 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="register-container">
-        <h2>Register</h2>
         <?php if ($error): ?>
             <div class="error-message"><?php echo $error; ?></div>
         <?php endif; ?>
@@ -72,6 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="success-message"><?php echo $success; ?></div>
         <?php endif; ?>
         <form method="post" action="">
+        <h2>Register</h2>
             <label for="firstname">First Name:</label>
             <input type="text" id="firstname" name="firstname" required>
 
@@ -88,9 +88,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="password" id="confirm_password" name="confirm_password" required>
 
             <button type="submit">Register</button>
+            <p>Already have an account? <a href="login.php">Log in</a></p>
+            <p><a href="homepage.php">← Back to Home</a></p>
         </form>
-        <p>Already have an account? <a href="login.php">Log in</a></p>
-        <p><a href="homepage.php">← Back to Home</a></p>
     </div>
 </body>
 </html> 
