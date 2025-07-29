@@ -1,0 +1,175 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema geneswimmodel
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema geneswimmodel
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `geneswimmodel` DEFAULT CHARACTER SET utf8mb4 ;
+USE `geneswimmodel` ;
+
+-- -----------------------------------------------------
+-- Table `geneswimmodel`.`duration`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `geneswimmodel`.`duration` (
+  `d_id` INT(11) NOT NULL,
+  `d_time` TIME NOT NULL,
+  PRIMARY KEY (`d_id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+
+-- -----------------------------------------------------
+-- Table `geneswimmodel`.`exercisetype`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `geneswimmodel`.`exercisetype` (
+  `et_id` INT(11) NOT NULL,
+  `et_name` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`et_id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+
+-- -----------------------------------------------------
+-- Table `geneswimmodel`.`focus`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `geneswimmodel`.`focus` (
+  `f_id` INT(11) NOT NULL,
+  `f_name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`f_id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+
+-- -----------------------------------------------------
+-- Table `geneswimmodel`.`set`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `geneswimmodel`.`set` (
+  `s_id` INT(11) NOT NULL,
+  `s_name` VARCHAR(45) NOT NULL,
+  `s_description` VARCHAR(255) NOT NULL,
+  `s_qr` TINYTEXT NOT NULL,
+  PRIMARY KEY (`s_id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+
+-- -----------------------------------------------------
+-- Table `geneswimmodel`.`users`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `geneswimmodel`.`users` (
+  `u_id` INT(11) NOT NULL,
+  `u_firstname` VARCHAR(255) NOT NULL,
+  `u_lastname` VARCHAR(255) NOT NULL,
+  `u_email` VARCHAR(255) NOT NULL,
+  `u_password` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`u_id`),
+  UNIQUE INDEX `u_email_UNIQUE` (`u_email` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COMMENT = '	';
+
+
+-- -----------------------------------------------------
+-- Table `geneswimmodel`.`exercise`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `geneswimmodel`.`exercise` (
+  `e_id` INT NOT NULL,
+  `e_name` VARCHAR(45) NOT NULL,
+  `et_id` INT NOT NULL,
+  `d_id` INT NOT NULL,
+  PRIMARY KEY (`e_id`),
+  INDEX `id_idx` (`et_id` ASC) VISIBLE,
+  INDEX `id_idx1` (`d_id` ASC) VISIBLE,
+  CONSTRAINT `id`
+    FOREIGN KEY (`d_id`)
+    REFERENCES `geneswimmodel`.`duration` (`d_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `id`
+    FOREIGN KEY (`et_id`)
+    REFERENCES `geneswimmodel`.`exercisetype` (`et_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `geneswimmodel`.`customexercise`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `geneswimmodel`.`customexercise` (
+  `s_id` INT NOT NULL,
+  `e_id` INT NOT NULL,
+  `u_id` INT NOT NULL,
+  INDEX `s_id_idx` (`s_id` ASC) VISIBLE,
+  INDEX `e_id_idx` (`e_id` ASC) VISIBLE,
+  INDEX `u_id_idx` (`u_id` ASC) VISIBLE,
+  CONSTRAINT `s_id`
+    FOREIGN KEY (`s_id`)
+    REFERENCES `geneswimmodel`.`set` (`s_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `e_id`
+    FOREIGN KEY (`e_id`)
+    REFERENCES `geneswimmodel`.`exercise` (`e_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `u_id`
+    FOREIGN KEY (`u_id`)
+    REFERENCES `geneswimmodel`.`users` (`u_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `geneswimmodel`.`exercisefocus`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `geneswimmodel`.`exercisefocus` (
+  `e_id` INT NOT NULL,
+  `f_id` INT NOT NULL,
+  INDEX `e_id_idx` (`e_id` ASC) VISIBLE,
+  INDEX `f_id_idx` (`f_id` ASC) VISIBLE,
+  CONSTRAINT `e_id`
+    FOREIGN KEY (`e_id`)
+    REFERENCES `geneswimmodel`.`exercise` (`e_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `f_id`
+    FOREIGN KEY (`f_id`)
+    REFERENCES `geneswimmodel`.`focus` (`f_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `geneswimmodel`.`lockset`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `geneswimmodel`.`lockset` (
+  `s_id` INT NOT NULL,
+  `e_id` INT NOT NULL,
+  INDEX `s_id_idx` (`s_id` ASC) VISIBLE,
+  INDEX `e_id_idx` (`e_id` ASC) VISIBLE,
+  CONSTRAINT `s_id`
+    FOREIGN KEY (`s_id`)
+    REFERENCES `geneswimmodel`.`set` (`s_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `e_id`
+    FOREIGN KEY (`e_id`)
+    REFERENCES `geneswimmodel`.`exercise` (`e_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
