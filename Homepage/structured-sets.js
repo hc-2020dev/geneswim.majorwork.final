@@ -4,7 +4,7 @@
 const workoutSets = {
     sprints: {
         title: "Sprints",
-        image: "https://ext.same-assets.com/4193966861/3844417856.jpeg",
+        image: "3844417856.jpeg",
         description: "This high-intensity set targets maximum speed, acceleration, and anaerobic power. Short intervals (25–50m) are performed at race pace or faster, with full or near-full rest to allow for peak effort each repetition.",
         benefits: [
             "Develops explosive speed and power",
@@ -25,7 +25,7 @@ const workoutSets = {
     },
     hypoxic: {
         title: "Hypoxic",
-        image: "https://ext.same-assets.com/4193966861/2988967394.jpeg",
+        image: "2988967394.jpeg",
         description: "This breath-control set is designed to improve lung capacity, discipline underwater, and boost efficiency between breaths. Swimmers follow restricted breathing patterns or complete short distances with limited breaths.",
         benefits: [
             "Increases lung capacity and efficiency",
@@ -46,7 +46,7 @@ const workoutSets = {
     },
     rehab: {
         title: "Rehabilitation",
-        image: "https://ext.same-assets.com/4193966861/4221476503.jpeg",
+        image: "4221476503.jpeg",
         description: "A low-intensity recovery-based set that promotes joint mobility, muscle activation, and stroke mechanics while reducing load on injured areas. Ideal for injury recovery and prevention.",
         benefits: [
             "Promotes healing and recovery",
@@ -67,7 +67,7 @@ const workoutSets = {
     },
     aerobics: {
         title: "Aerobics",
-        image: "https://ext.same-assets.com/4193966861/4097219043.jpeg",
+        image: "4097219043.jpeg",
         description: "This set emphasizes sustained swimming at moderate pace to build cardiovascular endurance, stroke rhythm, and pacing strategy. Perfect for building aerobic base fitness.",
         benefits: [
             "Builds cardiovascular endurance",
@@ -88,7 +88,7 @@ const workoutSets = {
     },
     "sprint-medley": {
         title: "Sprint (medley)",
-        image: "https://ext.same-assets.com/4193966861/4245787591.jpeg",
+        image: "4245787591.jpeg",
         description: "This sprint-focused IM set trains explosive transitions across all four competitive strokes: butterfly, backstroke, breaststroke, and freestyle. Perfect for developing versatility and speed.",
         benefits: [
             "Develops all four competitive strokes",

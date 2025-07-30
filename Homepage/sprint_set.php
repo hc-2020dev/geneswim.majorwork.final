@@ -51,7 +51,6 @@ $stmt->close();
 <body>
     <div class="register-container">
         <h2>Sprint Set</h2>
-        <h3>Set: <?php echo htmlspecialchars($set_name); ?></h3>
         <?php if (count($exercises) > 0): ?>
             <table border="1" cellpadding="8" style="margin-top:1rem;">
                 <tr><th>Exercise ID</th><th>Exercise Name</th><th>Type</th></tr>
@@ -63,10 +62,13 @@ $stmt->close();
                     </tr>
                 <?php endforeach; ?>
             </table>
+            <div class="set-qr">
+                <img src="frame.png" alt="Sprint Set QR code" loading="lazy">
+            </div>
         <?php else: ?>
             <p>No exercises linked to this set.</p>
         <?php endif; ?>
-        <p><a href="homepage.php">← Back to Home</a></p>
+        <p><a href="structured-sets.php">← Go Back </a></p>
     </div>
 </body>
-</html> 
+</html>
