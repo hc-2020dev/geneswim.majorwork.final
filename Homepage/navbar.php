@@ -12,7 +12,7 @@ session_start();
                     </a>
                 </div>
                 <div class="nav-links">
-                    <a href="#circuit-generator" class="nav-link">Circuit Generator</a>
+                    <a href="circuit_generator.php" class="nav-link">Circuit Generator</a>
                     <a href="structured-sets.php" class="nav-link">Structured Sets</a>
                 </div>
                 <div class="nav-auth">

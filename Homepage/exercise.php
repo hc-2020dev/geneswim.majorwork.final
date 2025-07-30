@@ -43,7 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="register-container">
-        <h2>Add Exercise</h2>
         <?php if ($error): ?>
             <div class="error-message"><?php echo $error; ?></div>
         <?php endif; ?>
@@ -51,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="success-message"><?php echo $success; ?></div>
         <?php endif; ?>
         <form method="post" action="">
+        <h2>Add Exercise</h2>
             <label for="e_name">Exercise Name:</label>
             <input type="text" id="e_name" name="e_name" maxlength="45" required>
 
