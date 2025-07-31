@@ -212,7 +212,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <button type="submit">Add Circuit</button>
             </form>
         <?php endif; ?>
-
         <p><a href="homepage.php">← Go Back</a></p>
     </div>
 </body>
